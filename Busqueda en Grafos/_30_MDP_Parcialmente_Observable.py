@@ -55,7 +55,7 @@ class POMDP:  # Define una clase para el POMDP
                 self.probabilidades_transicion[estado][accion][siguiente_estado] *
                 self.probabilidades_observacion[accion][siguiente_estado][observacion] *
                 (self.recompensas[estado][accion][siguiente_estado] +
-                self.factor_descuento * V[siguiente_estado])
+                self.factor_descuento * [siguiente_estado])
                 for estado in self.estados  # Para cada estado en los estados posibles
             ])
         return creencia
